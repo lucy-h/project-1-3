@@ -1,12 +1,32 @@
+<!-- Main page should have links to subpages where user can:
+	- add/search staff (including RAs and CAs)
+	- add/search expenses
+	- add/search programs
+	- add/search budgets
+	- add/search residence halls
+	Each of the add/search pages might have links to other pages. For example, when the user gets results with staff data, there might be links to the staff's budget.
+
+This was our original proposal:
+The standard task flow of our application would begin when one or more RA/CA proposes a program to their GHD. If the program is approved:
+1) the GHD would input program details into a form in our web interface
+2) if there are expense form number(s) included in the program details, then expense forms with those numbers were given out to fund that program
+3) after expense forms are used, the GHD would input additional details about that expense form (e.g. amount spent, vendor)
+4) given that staff member and budget details have already been added into the database, appropriate budgets would update each time an expense is logged (this is done in the backend)
+5) Note that expense forms can also be given out independent from a program.
+6) In addition to the web interface that allows the user to input initial residence hall, staff and budget data as well as add and update expenses, there is also a search page that allows expenses to be searched and organized by various search criteria.	
+ -->
+
 <head>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.min.css">
 </head>
+
 <div class="container">
-<h1>Welcome!</h1>
-<a href="insert.html">Update/Add Expenses</a><br>
-<a href="search.html">Search Expenses</a>
+	<h1>Welcome!</h1>
+	<a href="insert.html">Update/Add Expenses</a><br>
+	<a href="search.html">Search Expenses</a>
 <div>
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>

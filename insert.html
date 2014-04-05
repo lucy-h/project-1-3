@@ -1,21 +1,35 @@
+<!-- Template for the add/insert page
+	
+	There should be one of these for each kind of entity.
+	Make sure that the forms can capture relationships. For example, if this is a "New Program" page, you might want to have a get request to get all the staff members, and let the user select the program organizer from a dropdown menu. You don't have to code in the get request yet, but make sure you have the front end for something like that.
+
+	Notice that the "Add" button calls the addRequest() function in the main.js javascript. The addRequest function shoudld take data from the form and send a put request to a URL of the following form:
+		../add.php?type=staff&name=lucy&phonenum=9178337518... 
+	So that it's consistent I think we should use the exact attribute names from our proprosal:
+	https://docs.google.com/document/d/1HK8APhki0GuyoQGJJIHbd8eqtZAC9uDKjxVpmy0aDwo/edit
+	But take out all the '_' so that phone_num becomes phonenum, for example.
+
+-->
+
 <head>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/normalize.min.css">
 </head>
+
 <div class="container">
 	<h1>Insert</h1>
 	Form
 	<br>
 	<form>
-	Name: <input name="name" id="name-input" type="text" size="30" maxlength="60" /> 
-	<span id="name"></span><br />
-	<button type='button' id='delete-itinerary' class='btn btn-default' onclick="addRequest()">Add</button>
-
+		Name: <input name="name" id="name-input" type="text" size="30" maxlength="60" /> 
+		<span id="name"></span><br />
+		<button type='button' id='delete-itinerary' class='btn btn-default' onclick="addRequest()">Add</button>
 	</form>
 	<br>
 	Results
-	<div id="results"></div>
+	<div id="results"><!-- Make sure you have a results div in all your pages. From the backend, I will fill in the results div after users click add or search. --></div>
 </div>
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>

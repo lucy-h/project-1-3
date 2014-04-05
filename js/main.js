@@ -15,6 +15,7 @@ function sendRequest(email) {
 	// Use the GET method.
 	// Pass the email address in the URL.
     alert("sent");
+    // example of a get request for funds_requested = 150
     http.open('get', '../ajax.php?funds_requested=' + encodeURIComponent(150));
     http.onreadystatechange = handleGetResponse;
     http.send(null);
